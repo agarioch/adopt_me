@@ -4,10 +4,36 @@
 .pets {
   background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232c7a7b' fill-opacity='0.15'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
+.pet-name {
+  font-family: "Gloria Hallelujah", cursive;
+}
 
 .title {
   font-family: "Gloria Hallelujah", cursive;
   @apply inline text-4xl text-teal-600 ml-6 font-semibold;
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded my-3;
+}
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+.btn-primary {
+  @apply bg-teal-600 text-white;
+}
+.btn-primary:hover {
+  @apply: bg-teal-500;
+}
+
+.input {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight my-3;
+}
+.input:focus {
+  @apply outline-none shadow-outline;
+}
+.label {
+  @apply block text-gray-700 text-sm font-bold mt-3;
 }
 
 @tailwind utilities;
