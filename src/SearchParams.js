@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { ANIMALS } from "@frontendmasters/pet";
+import useDropdown from "./useDropdown";
 
 const SearchParams = () => {
   const [location, setLocation] = useState("Seattle, WA");
-  const [animal, setAnimal] = useState("dog");
-  const [breed, setBreed] = useState();
+  const [breeds, setBreeds] = useState([]);
+  const [animal, AnimalDropdown] = useDropdown("Animal", "dog", ANIMALS);
+  const [breed, BreedDropdown] = useDropdown("Breed", "", breeds);
 
   return (
     <div className="search-params w-full max-w-xs m-4">
@@ -23,40 +25,8 @@ const SearchParams = () => {
             onChange={(e) => setLocation(e.target.value)}
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="animal" className="frm-label">
-            Type of Animal
-          </label>
-          <select
-            className="form-select block w-full"
-            id="animal"
-            value={animal}
-            onChange={(e) => setAnimal(e.target.value)}
-            onBlur={(e) => setAnimal(e.target.value)}
-          >
-            <option>All</option>
-            {ANIMALS.map((animal) => (
-              <option key={animal} value={animal}>
-                {animal}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="breed" className="frm-label">
-            Breed
-          </label>
-          <select
-            className="form-select block w-full"
-            id="breed"
-            value={breed}
-            onChange={(e) => setBreed(e.target.value)}
-            onBlur={(e) => setBreed(e.target.value)}
-            disabled
-          >
-            <option>All</option>
-          </select>
-        </div>
+        <AnimalDropdown />
+        <BreedDropdown />
         <button className="btn btn-primary">Submit</button>
       </form>
     </div>
