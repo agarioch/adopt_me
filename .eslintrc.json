@@ -7,13 +7,6 @@
     "prettier",
     "prettier/react"
   ],
-  "rules": {
-    "react/prop-types": 0,
-    "no-console": 1,
-    "react-hooks/rule-of-hooks": 2,
-    "react-hooks/exhaustive-deps": 1
-  },
-  "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
@@ -21,14 +14,21 @@
       "jsx": true
     }
   },
+  "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
+  "rules": {
+    "react/prop-types": 0,
+    "no-console": 1,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
   "env": {
     "es6": true,
     "browser": true,
-    "node": true,
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     }
   }
 }
