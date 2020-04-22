@@ -30,9 +30,13 @@ const SearchParams = () => {
     }, console.error);
   }, [setBreeds, setBreed, animal]);
 
+  useEffect(() => {
+    requestPets();
+  }, []);
+
   return (
     <div className="block md:flex">
-      <div className="search-params w-full md:max-w-screen-xs max-w-xs m-4">
+      <div className="search-params w-full flex-shrink-0 max-w-xs m-4">
         <form
           className="bg-white shadow-md rounded px-8 pt-6 pb-8"
           onSubmit={(e) => {
@@ -56,7 +60,7 @@ const SearchParams = () => {
           </div>
           <AnimalDropdown />
           <BreedDropdown />
-          <button className="btn btn-primary">Submit</button>
+          <button className="btn btn-primary w-full">Search For Pets</button>
         </form>
       </div>
       <Pets pets={pets} />

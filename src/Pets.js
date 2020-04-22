@@ -1,6 +1,6 @@
 import React from "react";
 import Pet from "./Pet";
-import notFoundImage from "./img/undraw_pet_adoption_2qkw.svg";
+import notFoundImage from "./img/undraw_loading_frh4.svg";
 
 const Pets = ({ pets }) => {
   return (
