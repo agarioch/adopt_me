@@ -19,9 +19,7 @@ export default function Pet({ name, animal, breed, media, location, id }) {
       />
       <div className="px-2 w-64">
         <div className="name-wrapper inline-block max-w-full">
-          <h1 className="pet-name text-2xl font-semibold text-teal-700 truncate">
-            {name}
-          </h1>
+          <h1 className="pet-name truncate">{name}</h1>
           <div className="w-full h-1 bg-teal-200 -mt-1 mb-1"></div>
         </div>
         <div className="py-2">
