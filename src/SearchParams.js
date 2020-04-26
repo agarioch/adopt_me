@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
 import pet, { ANIMALS } from "@frontendmasters/pet";
-import useDropdown from "./useDropdown";
+import useAnimalDropdown from "./useAnimalDropdown";
+import useBreedDropdown from "./useBreedDropdown";
 import Pets from "./Pets";
 import LocationContext from "./LocationContext";
 
 const SearchParams = () => {
   const [location, setLocation] = useContext(LocationContext);
   const [breeds, setBreeds] = useState([]);
-  const [animal, AnimalDropdown] = useDropdown("Animal", "dog", ANIMALS);
-  const [breed, BreedDropdown, setBreed] = useDropdown("Breed", "", breeds);
+  const [animal, AnimalDropdown] = useAnimalDropdown("Animal", ANIMALS);
+  const [breed, BreedDropdown, setBreed] = useBreedDropdown("Breed", breeds);
   const [pets, setPets] = useState([]);
 
   async function requestPets() {
