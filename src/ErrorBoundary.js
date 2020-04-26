@@ -25,7 +25,7 @@ class ErrorBoundary extends Component {
               {" "}
               Click here{" "}
             </Link>{" "}
-            to return to the home page or wait five seconds.
+            to return to the home page or wait to be redirected.
           </h1>
         </div>
       );
