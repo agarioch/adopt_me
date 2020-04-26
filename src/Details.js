@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import pet from "@frontendmasters/pet";
 import notFoundImage from "./img/undraw_loading_frh4.svg";
 import Carousel from "./Carousel";
+import ErrorBoundary from "./ErrorBoundary";
 
 class Details extends Component {
   state = {
@@ -9,6 +10,7 @@ class Details extends Component {
   };
 
   componentDidMount() {
+    throw new error("test");
     pet.animal(this.props.id).then(({ animal }) => {
       this.setState({
         name: animal.name,
@@ -47,4 +49,10 @@ class Details extends Component {
   }
 }
 
-export default Details;
+export default function DetailsWithErrorBoundary(props) {
+  return (
+    <ErrorBoundary>
+      <Details {...props} />
+    </ErrorBoundary>
+  );
+}
