@@ -1,6 +1,7 @@
 import React from "react";
 import breedIcon from "./img/pets-black-18dp.svg";
 import locationIcon from "./img/place-black-18dp.svg";
+import { Link } from "@reach/router";
 export default function Pet({ name, animal, breed, media, location, id }) {
   let hero = "http://placecorgi.com/300/300";
   if (media.length) {
@@ -8,8 +9,8 @@ export default function Pet({ name, animal, breed, media, location, id }) {
   }
 
   return (
-    <a
-      href={`/details/${id}`}
+    <Link
+      to={`/details/${id}`}
       className="pet rounded bg-white shadow-lg m-3 h-32 flex border-gray-400 items-center"
     >
       <img
@@ -35,6 +36,6 @@ export default function Pet({ name, animal, breed, media, location, id }) {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

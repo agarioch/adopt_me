@@ -7,23 +7,32 @@ import ErrorBoundary from "./ErrorBoundary";
 class Details extends Component {
   state = {
     loading: true,
+    error: false,
   };
 
   componentDidMount() {
-    throw new error("test");
-    pet.animal(this.props.id).then(({ animal }) => {
-      this.setState({
-        name: animal.name,
-        animal: animal.type,
-        location: `${animal.contact.address.city}, ${animal.contact.address.state}`,
-        description: animal.description,
-        media: animal.photos,
-        breed: animal.breeds.primary,
-        loading: false,
+    pet
+      .animal(this.props.id)
+      .then(({ animal }) => {
+        this.setState({
+          name: animal.name,
+          animal: animal.type,
+          location: `${animal.contact.address.city}, ${animal.contact.address.state}`,
+          description: animal.description,
+          media: animal.photos,
+          breed: animal.breeds.primary,
+          loading: false,
+        });
+      })
+      .catch((e) => {
+        this.setState({ error: true });
       });
-    });
   }
   render() {
+    if (this.state.error) {
+      throw new Error();
+    }
+
     if (this.state.loading) {
       return (
         <div className="pl-8 pt-8">

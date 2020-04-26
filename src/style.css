@@ -53,10 +53,19 @@ select:disabled {
 .form-group {
   @apply my-8;
 }
+
 .carousel-smaller,
 .carousel > img {
-  max-width: 45%;
-  max-height: 400px;
+  max-width: 90%;
+  max-height: 200px;
+}
+
+@screen sm {
+  .carousel-smaller,
+  .carousel > img {
+    max-width: 45%;
+    max-height: 400px;
+  }
 }
 
 @tailwind utilities;
