@@ -34,7 +34,12 @@
 .btn-primary:hover {
   @apply bg-teal-700;
 }
-
+.btn-secondary {
+  @apply bg-gray-300;
+}
+.btn-secondary:hover {
+  @apply bg-gray-400;
+}
 select:disabled {
   @apply bg-gray-200 text-gray-500;
 }
@@ -66,6 +71,37 @@ select:disabled {
     max-width: 45%;
     max-height: 400px;
   }
+}
+
+#modal {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal:empty {
+  display: none;
+}
+
+#modal > div {
+  background-color: white;
+  max-width: 500px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#modal .btn {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: 2rem;
 }
 
 @tailwind utilities;

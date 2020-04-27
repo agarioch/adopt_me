@@ -18,13 +18,13 @@ const SearchParams = () => {
       breed,
       type: animal,
     });
-    console.log(animals);
     setPets(animals || []);
   }
 
   useEffect(() => {
     setBreeds([]);
     setBreed("");
+    console.log("cleared breeds");
 
     pet.breeds(animal).then(({ breeds }) => {
       const breedStrings = breeds.map(({ name }) => name);
