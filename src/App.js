@@ -28,7 +28,7 @@ function App() {
                 <h1 className="title">Adopt Me</h1>
               </Link>
             </nav>
-            <Router>
+            <Router basepath="/adopt_me">
               <SearchParams path="/" />
               <Details path="/details/:id" />
             </Router>
