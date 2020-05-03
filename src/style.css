@@ -4,7 +4,7 @@
 
 @tailwind base;
 @tailwind components;
-a:link {
+a {
   text-decoration: none;
 }
 
