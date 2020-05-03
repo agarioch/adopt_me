@@ -68,7 +68,7 @@ class Details extends Component {
           <button className="btn btn-primary mt-3" onClick={this.toggleModal}>
             Adopt {name}
           </button>
-          <Link to="/">
+          <Link to="/adopt_me/">
             <div className="btn btn-secondary inline-block ml-3">Back</div>
           </Link>
           {showModal ? (

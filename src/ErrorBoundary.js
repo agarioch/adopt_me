@@ -21,7 +21,7 @@ class ErrorBoundary extends Component {
         <div className="w-10/12 m-auto text-xl">
           <h1>
             There was an error with this listing.{" "}
-            <Link to="/" className="text-teal-700 font-bold">
+            <Link to="/adopt_me/" className="text-teal-700 font-bold">
               {" "}
               Click here{" "}
             </Link>{" "}

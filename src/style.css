@@ -4,6 +4,9 @@
 
 @tailwind base;
 @tailwind components;
+a:link {
+  text-decoration: none;
+}
 
 .pet {
   width: 24rem;

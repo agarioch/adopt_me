@@ -19,7 +19,7 @@ function App() {
         <BreedContext.Provider value={breedHook}>
           <div>
             <nav className="flex items-center p-6 mb-6 border-t-4 border-teal-600 bg-white shadow">
-              <Link to="/">
+              <Link to="/adopt_me">
                 <img
                   src={catLogo}
                   alt="cat logo"

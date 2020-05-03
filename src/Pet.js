@@ -10,7 +10,7 @@ export default function Pet({ name, animal, breed, media, location, id }) {
 
   return (
     <Link
-      to={`/details/${id}`}
+      to={`/adopt_me/details/${id}`}
       className="pet rounded bg-white shadow-lg m-3 h-32 flex border-gray-400 items-center"
     >
       <img
